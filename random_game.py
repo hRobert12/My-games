@@ -51,32 +51,20 @@ def checknumber(number):
         input()
         return True
 
-print("Please use numbers (without decimals) when inputing")
-while get_inp:
-    inp = input("Do you want to save or load (s or l)")
-    if inp == "s":
-        while(get_inp):
-            try:
-                minn = int(input('Set min: '))
-                maxn = int(input('Set max: '))
-                get_inp = False
-            except ValueError:
-                print('Invald input')
-        save()
-    elif inp == "l":
-        loads = load()
-        maxn = loads[0]
-        minn = loads[1]
-        get_inp = False
-    else:
-        print("Invald input")
-ntg = random.randint(minn, maxn)
 while True:
-    inp = inputnumber()
-    if checknumber(inp):
-        ntg = random.randint(minn, maxn)
-        trys = 0
-        sys.exit()
-    else:
-        trys = trys + 1
-        
+    inp = goToHomescreen()
+    while get_inp
+        if inp == p
+            while True:
+                print("Please use numbers (without decimals) when inputing")
+                inp = inputnumber()
+                if checknumber(inp):
+                    ntg = random.randint(minn, maxn)
+                    trys = 0
+                    break
+                else:
+                    trys = trys + 1
+        if inp == o
+            """does't do anything"""
+        if inp == q
+            sys.exit()

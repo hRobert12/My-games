@@ -16,6 +16,12 @@ maxn = 0
 get_inp = True
 ntg = 0
 
+def goToHomescreen():
+    print("[p]lay")
+    print("[o]ptions")
+    print("[q]uit")
+    return input("/n")
+
 def save():
     dump1 = pickle.dumps(minn)
     dump2 = pickle.dumps(maxn)

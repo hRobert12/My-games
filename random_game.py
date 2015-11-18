@@ -31,8 +31,8 @@ def save():
 
 def load():
     dbs = dbm.open("save.db", "c")
-    load1 = pickle.loads(dbs["min"])
-    load2 = pickle.loads(dbs["max"])
+    load1 = pickle.loads(dbs["max"])
+    load2 = pickle.loads(dbs["min"])
     return [load1, load2]
 
 def inputnumber():

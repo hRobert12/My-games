@@ -10,12 +10,3 @@ Updates:
 none
 
 NOTE: this is my take on the radom game, i know there are others out there.
-#
-#
-#
-#
-#
-#
-#
-#
-#

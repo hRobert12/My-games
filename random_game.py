@@ -54,7 +54,15 @@ while get_inp:
     print("Type your pick in lower-case")
     inp = input("/n")
     if inp == p
-        """Play"""
+        ntg = random.randint(minn, maxn)
+        while True:
+            inp = inputnumber()
+            if checknumber(inp):
+                ntg = random.randint(minn, maxn)
+                trys = 0
+                break()
+            else:
+                trys = trys + 1
         get_inp = False
     elif inp == o
         """Options"""

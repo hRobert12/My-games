@@ -45,21 +45,32 @@ def checknumber(number):
         input()
         return True
 
-get_inp = True
-
+print("Please use numbers (without decimals) when inputing")
 while get_inp:
-    print("[P]lay")
-    print("[O]ptions")
-    print("[Q]uit")
-    print("Type your pick in lower-case")
-    inp = input("/n")
-    if inp == p
-        """Play"""
+    inp = input("Do you want to save or load (s or l)")
+    if inp == "s":
+        while(get_inp):
+            try:
+                minn = int(input('Set min: '))
+                maxn = int(input('Set max: '))
+                get_inp = False
+            except ValueError:
+                print('Invald input')
+        save()
+    elif inp == "l":
+        loads = load()
+        maxn = loads[0]
+        minn = loads[1]
         get_inp = False
-    elif inp == o
-        """Options"""
-        get_inp = False
-    elif inp == q
-        sys.exit()
-    else
+    else:
         print("Invald input")
+ntg = random.randint(minn, maxn)
+while True:
+    inp = inputnumber()
+    if checknumber(inp):
+        ntg = random.randint(minn, maxn)
+        trys = 0
+        sys.exit()
+    else:
+        trys = trys + 1
+        

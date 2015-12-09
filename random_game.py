@@ -52,22 +52,22 @@ while get_inp:
     print("[O]ptions")
     print("[Q]uit")
     print("Type your pick in lower-case")
-    inp = input("/n")
-    if inp == p
+    inp = input("")
+    if inp == "p":
         ntg = random.randint(minn, maxn)
-        while True:
+        while inp != ntg:
             inp = inputnumber()
             if checknumber(inp):
                 ntg = random.randint(minn, maxn)
                 trys = 0
-                break()
+                
             else:
                 trys = trys + 1
-        get_inp = False
-    elif inp == o
+        get_inp = True
+    elif inp == "o":
         """Options"""
-        get_inp = False
-    elif inp == q
+        get_inp = True
+    elif inp == "q":
         sys.exit()
-    else
+    else:
         print("Invald input")

@@ -7,7 +7,7 @@ Created on Fri Nov  6 16:58:12 2015
 import random
 import dbm
 import pickle
-import sys
+"""import sys"""
 
 inp = 0
 trys = 0
@@ -68,6 +68,6 @@ while get_inp:
         """Options"""
         get_inp = True
     elif inp == "q":
-        sys.exit()
+        break
     else:
         print("Invald input")

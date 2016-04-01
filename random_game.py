@@ -53,6 +53,7 @@ def checknumber(number):
         input()
         return True
 
+
 get_inp = True
 maxn, minn = load()
 
@@ -90,5 +91,5 @@ while get_inp:
                 break
     elif inp == "q":
         break
-    else:
-        print("Invald input")
+
+        

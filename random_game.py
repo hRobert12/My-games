@@ -10,7 +10,7 @@ import pickle
 import sys
 
 inp = 0
-trys = 0
+trys = 1
 minn = 0
 maxn = 0
 get_inp = True
@@ -49,48 +49,52 @@ def checknumber(number):
         print("Try higher")
         return False
     if inp == ntg:
-        print("Good job, you took %s try(s), press enter..." % trys + 1)
+        print("Good job, you took %s try(s), press enter..." % trys)
         input()
         return True
 
 
 get_inp = True
-maxn, minn = load()
-
-while get_inp:
-    print("[P]lay")
-    print("[O]ptions")
-    print("[Q]uit")
-    print("Type your pick in lower-case")
-    inp = input("")
-    if inp == "p":
-        ntg = random.randint(minn, maxn)
-        while inp != ntg:
-            inp = inputnumber()
-            if checknumber(inp):
-                ntg = random.randint(minn, maxn)
-                trys = 0
-                break
-            else:
-                trys = trys + 1
-        get_inp = True
-    elif inp == "o":
-        while get_inp:
-            print("[A]just min and max")
-            print("[L]oad min and max")
-            print("[Q]uit options")
-            print("Type your pick in lower-case")
-            inp = input("")
-            if inp == "a":
-                minn = input("Type min: ")
-                maxn = input("Type max: ")
-                save()
-                load()
-            if inp == "l":
-                maxn, minn = load()
-            if inp == "q":
-                break
-    elif inp == "q":
-        break
-
-        
+try:
+    maxn, minn = load()
+    
+    while get_inp:
+        print("[P]lay")
+        print("[O]ptions")
+        print("[Q]uit")
+        print("Type your pick in lower-case")
+        inp = input("")
+        if inp == "p":
+            ntg = random.randint(minn, maxn)
+            while inp != ntg:
+                inp = inputnumber()
+                if checknumber(inp):
+                    ntg = random.randint(minn, maxn)
+                    trys = 1
+                    break
+                else:
+                    trys = trys + 1
+            get_inp = True
+        elif inp == "o":
+            while get_inp:
+                print("[A]just min and max")
+                print("[L]oad min and max")
+                print("[Q]uit options")
+                print("Type your pick in lower-case")
+                inp = input("")
+                if inp == "a":
+                    minn = input("Type min: ")
+                    maxn = input("Type max: ")
+                    save()
+                    maxn = int(maxn)
+                    minn = int(minn)
+                if inp == "l":
+                    maxn, minn = load()
+                if inp == "q":
+                    break
+        elif inp == "q":
+            break
+except:
+    print("Uh-oh, something went wrong. If you see this error for the first time, then please re-start the program.")
+    print("Otherwise, please re-insall the program.")
+    input("")

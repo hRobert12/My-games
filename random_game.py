@@ -49,7 +49,7 @@ def checknumber(number):
         print("Try higher")
         return False
     if inp == ntg:
-        print("Good job, you took %s try(s), press enter..." % trys)
+        print("Good job, you took %s try(s), press enter..." % trys + 1)
         input()
         return True
 
@@ -83,8 +83,9 @@ while get_inp:
             inp = input("")
             if inp == "a":
                 minn = input("Type min: ")
-                maxn = input("Type mxax: ")
+                maxn = input("Type max: ")
                 save()
+                load()
             if inp == "l":
                 maxn, minn = load()
             if inp == "q":

@@ -8,3 +8,4 @@ while True:
         import random_game
     if inp == "quit":
         sys.exit()
+    """maybe a new game?"""

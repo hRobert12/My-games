@@ -14,3 +14,5 @@ Re-added homescreen w/ options
 ~~added home screen~~ reverted :\
 
 NOTE: this is my take on the radom game, i know there are others out there.
+
+[![Build Status](https://travis-ci.org/hRobert12/My-games.svg?branch=master)](https://travis-ci.org/hRobert12/My-games)

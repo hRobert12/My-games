@@ -16,6 +16,8 @@ maxn = 0
 get_inp = True
 ntg = 0
 
+
+
 def save():
     dump1 = pickle.dumps(minn)
     dump2 = pickle.dumps(maxn)

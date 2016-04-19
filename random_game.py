@@ -9,6 +9,12 @@ import dbm
 import pickle
 import sys
 
+try:
+    import rollbar
+    rollbar.init('06af8b31196c43d2a6703cd525cd2e69')
+except:
+    pass
+
 inp = 0
 trys = 1
 minn = 0
@@ -26,13 +32,19 @@ def save():
     dbs["max"] = dump2
 
 def load():
-    dbs = dbm.open("save.db", "c")
-    load1 = pickle.loads(dbs["max"])
-    load2 = pickle.loads(dbs["min"])
     try:
+        dbs = dbm.open("save.db", "c")
+        load1 = pickle.loads(dbs["max"])
+        load2 = pickle.loads(dbs["min"])
+        
         load1 = int(load1)
         load2 = int(load2)
-    except ValueError:
+    except:
+        try:
+            rollbar.report_message("Load error", "critical")
+            rollbar.report_exc_info()
+        except:
+            pass
         print("Opps... something went wrong, you may have inserted the word for the number instead of the number itself")
         print("Please re-download this program to fix this problem; the program will now close.")
         input("")
@@ -97,6 +109,10 @@ try:
         elif inp == "q":
             break
 except:
+    try:
+        rollbar.report_exc_info()
+    except:
+        pass
     print("Uh-oh, something went wrong. If you see this error for the first time, then please re-start the program.")
     print("Otherwise, please re-insall the program.")
     input("")

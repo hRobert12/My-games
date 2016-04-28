@@ -7,7 +7,7 @@ Open the file in a inturper and follow the instructins from there.
 
 ##Updates:
 
-(Note: updates in the futre will be in the release notes.)
+(Note: updates in the futre will be in the release notes, and these programs will get a gui soon, so stay tuned!)
 
 Re-added homescreen w/ options
 
